@@ -1,0 +1,38 @@
+{
+  "name": "sales-captain",
+  "version": "1.0.0",
+  "description": "WhatsApp Chat Roleplay Training System - AI-powered sales training platform",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "npm run dev --workspace=backend",
+    "dev:frontend": "npm run dev --workspace=frontend",
+    "build": "npm run build --workspaces",
+    "build:backend": "npm run build --workspace=backend",
+    "build:frontend": "npm run build --workspace=frontend",
+    "lint": "npm run lint --workspaces",
+    "test": "npm run test --workspaces",
+    "clean": "rimraf node_modules backend/node_modules frontend/node_modules backend/dist frontend/dist"
+  },
+  "keywords": [
+    "sales-training",
+    "ai-coaching",
+    "roleplay",
+    "mern",
+    "typescript"
+  ],
+  "author": "Sales Captain Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "rimraf": "^5.0.5"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  }
+}
